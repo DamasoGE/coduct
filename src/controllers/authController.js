@@ -2,6 +2,8 @@ import jwt from "jsonwebtoken";
 import Seller from "../models/Seller.js";
 import { JWT_SECRET, NODE_ENV } from "../config/config.js";
 
+
+
 const login = async (req, res) => {
   const { username, password } = req.body;
 

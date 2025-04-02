@@ -1,7 +1,6 @@
 import jwt from "jsonwebtoken";
 import { JWT_SECRET } from "../config/config.js";
 
-// Middleware para verificar el token JWT
 const authMiddleware = (req, res, next) => {
   const token = req.cookies.token;
 
@@ -11,7 +10,7 @@ const authMiddleware = (req, res, next) => {
 
   try {
     const verified = jwt.verify(token, JWT_SECRET);
-    req.userId = verified.userId;
+    req.sellerId = verified.sellerId;
     next();
   } catch (err) {
     res.status(403).json({ auth:false, message: "Token inválido o expirado" });
