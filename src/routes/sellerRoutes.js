@@ -1,6 +1,6 @@
 import express from "express";
 import { getSellerProfile } from "../controllers/sellerController.js";
-import authMiddleware from "../middlewares/authMiddleware.js";
+import authMiddleware from "../middlewares/authSellerMiddleware.js";
 import Seller from "../models/Seller.js";
 
 const router = express.Router();

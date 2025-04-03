@@ -19,6 +19,8 @@ const scriptDB = async () => {
   } finally {
     mongoose.connection.close();
   }
+
+  
 };
 
 scriptDB();

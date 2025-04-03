@@ -12,4 +12,4 @@ const getSellerProfile = async (req, res) => {
   }
 };
 
-export { addSeller, getSellerProfile };
+export { getSellerProfile };
